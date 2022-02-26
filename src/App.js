@@ -4,11 +4,11 @@ import PorfolioPage from './Pages/Portfolio';
 
 function App() {
   return (
-    <Container fixed>
-      <div className="App">
-        <PorfolioPage />
-      </div>
-    </Container>
+    <div className="App">
+      <Container fixed sx={{ my: 2}}>
+        <PorfolioPage/>
+      </Container>
+    </div>
   );
 }
 
