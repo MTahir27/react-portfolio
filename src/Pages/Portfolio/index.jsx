@@ -1,11 +1,14 @@
-import Portfolio from "../../Components/Portfolio";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Portfolio from '../../Components/Portfolio';
 
-const PorfolioPage = () => {
+export default function PorfolioPage(){
   return (
-    <div style={{ width: "100%" }}>
-      <Portfolio />
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Portfolio />
+      </Grid>
+    </Box>
   );
-};
-
-export default PorfolioPage;
+}
