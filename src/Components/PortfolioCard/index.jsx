@@ -7,26 +7,21 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
-export default function PortfolioCard() {
+export default function PortfolioCard({ name, img, desc, url }) {
   return (
     <Card>
-      <CardMedia
-        component="img"
-        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
-        alt="green iguana"
-      />
+      <CardMedia component="img" image={img} alt={`${name}`} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {desc}
         </Typography>
       </CardContent>
       <CardActions>
         <Button size="small">
-          <Link href="#" color="inherit" underline="none">
+          <Link href={url} target="_blank" color="inherit" underline="none">
             Go to website
           </Link>
         </Button>

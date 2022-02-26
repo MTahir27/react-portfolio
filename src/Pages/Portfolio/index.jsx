@@ -11,7 +11,7 @@ export default function PorfolioPage() {
       img: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       url: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       type: "Ecommerce App",
-      id: "1",
+      id: 1,
     },
     {
       name: "Project Name",
@@ -19,7 +19,7 @@ export default function PorfolioPage() {
       img: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       url: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       type: "Ecommerce App",
-      id: "1",
+      id: 2,
     },
     {
       name: "Eduaction Website",
@@ -27,7 +27,7 @@ export default function PorfolioPage() {
       img: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       url: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       type: "Eduaction Website",
-      id: "3",
+      id: 3,
     },
     {
       name: "LMS Website",
@@ -35,7 +35,7 @@ export default function PorfolioPage() {
       img: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       url: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       type: "LMS Website",
-      id: "4",
+      id: 4,
     },
     {
       name: "Real Estate App",
@@ -43,15 +43,19 @@ export default function PorfolioPage() {
       img: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       url: "https://mui.com/static/images/cards/contemplative-reptile.jpg",
       type: "Real Estate App",
-      id: "5",
+      id: 5,
     },
   ];
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4} lg={3}>
-          <PortfolioCard />
-        </Grid>
+        {portfolioArray.map(({id, ...otherPortfolioProps}) => {
+          return (
+            <Grid item xs={12} sm={6} md={4} lg={3} key={id}>
+              <PortfolioCard  {...otherPortfolioProps} />
+            </Grid>
+          );
+        })}
       </Grid>
     </Box>
   );
