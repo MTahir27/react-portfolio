@@ -8,11 +8,11 @@ import Typography from '@mui/material/Typography';
 
 export default function PortfolioCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardMedia
         component="img"
-        height="140"
-        image="/static/images/cards/contemplative-reptile.jpg"
+        // height="140"
+        image="https://mui.com/static/images/cards/contemplative-reptile.jpg"
         alt="green iguana"
       />
       <CardContent>
@@ -25,8 +25,7 @@ export default function PortfolioCard() {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Go to website</Button>
       </CardActions>
     </Card>
   );

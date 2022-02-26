@@ -10,6 +10,15 @@ export default function PorfolioPage() {
         <Grid item xs={12} sm={6} md={4} lg={3}>
           <PortfolioCard />
         </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <PortfolioCard />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <PortfolioCard />
+        </Grid>
+        <Grid item xs={12} sm={6} md={4} lg={3}>
+          <PortfolioCard />
+        </Grid>
       </Grid>
     </Box>
   );
